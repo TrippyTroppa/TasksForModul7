@@ -6,25 +6,39 @@ using System.Threading.Tasks;
 
 namespace TasksForModul7
 {
-    internal class Program
+    class BaseClass
+    {
+        protected string Name;
+
+        public BaseClass(string name)
+        {
+            Name = name;
+        }
+    }
+
+    class DerivedClass : BaseClass
+    {
+        public string Description;
+
+        public int Counter;
+
+        public DerivedClass(string name, string discription) : base(name)
+        {
+            Description = discription;
+        }
+
+        public DerivedClass(string name, string discription, int counter) : base(name)
+        {
+            Description = discription;
+            Counter = counter;
+        }
+    }
+    class Program
     {
         static void Main(string[] args)
         {
+           
         }
-        class Obj
-        {
-            private string name;
-            private string owner;
-            private int length;
-            private int count;
 
-            public Obj(string name, string ownerName, int objLength, int count)
-            {
-             this.name = name;
-             owner = ownerName;
-             length = objLength;
-             this.count = count;
-            }
-        }
     }
 }
