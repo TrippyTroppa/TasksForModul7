@@ -9,40 +9,29 @@ namespace TasksForModul7
 {
     class BaseClass
     {
-        protected string Name;
-
-        public BaseClass(string name)
+        public virtual int Counter
         {
-            Name = name;
-        }
-
-        public virtual void Display()
-        {
-            Console.WriteLine("Метод класса BaseClass");
+            get;
+            set;
         }
     }
 
     class DerivedClass : BaseClass
     {
-        public string Description;
-
-        public int Counter;
-
-        public DerivedClass(string name, string discription) : base(name)
-        {
-            Description = discription;
+        private int counter;
+        public override int Counter 
+        { 
+         get 
+            {  
+                return Counter;
+            }
+            
+         set
+            {
+              if (value > 0)
+                    Counter = value;
+            }
         }
-
-        public DerivedClass(string name, string discription, int counter) : base(name)
-        {
-            Description = discription;
-            Counter = counter;
-        }
-        public override void Display()
-        {
-            Console.WriteLine("Метод класса DerivedClass");
-        }
-        
     }
     class Program
     {
