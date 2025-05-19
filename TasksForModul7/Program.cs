@@ -11,22 +11,23 @@ namespace TasksForModul7
         static void Main(string[] args)
         {
         }
-        class Employee
-        {
-            public string Name;
-            public int Age;
-            public int Salary;
-        }
-        class ProjectManager : Employee
-        { 
+        public class Food
+        { }
+        public class Fruit : Food
+        { }
 
-         public string ProjectName;
+        public class Vegetable : Food
+        { }
 
-        }
-
-        class Developer : Employee
-        {
-         public string ProgrammingLanguage;
-        }
+        public class Apple : Fruit
+        { }
+        public class Pear : Fruit
+        { }
+        public class Banana : Fruit
+        { }
+        public class Potato : Vegetable
+        { }
+        public class Carrot : Vegetable
+        { }
     }
 }
