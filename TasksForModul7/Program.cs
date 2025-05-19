@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +14,11 @@ namespace TasksForModul7
         public BaseClass(string name)
         {
             Name = name;
+        }
+
+        public virtual void Display()
+        {
+            Console.WriteLine("Метод класса BaseClass");
         }
     }
 
@@ -32,12 +38,18 @@ namespace TasksForModul7
             Description = discription;
             Counter = counter;
         }
+        public override void Display()
+        {
+            Console.WriteLine("Метод класса DerivedClass");
+        }
+        
     }
     class Program
     {
         static void Main(string[] args)
         {
-           
+            
+
         }
 
     }
