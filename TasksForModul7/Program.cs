@@ -11,23 +11,20 @@ namespace TasksForModul7
         static void Main(string[] args)
         {
         }
-        public class Food
-        { }
-        public class Fruit : Food
-        { }
+        class Obj
+        {
+            private string name;
+            private string owner;
+            private int length;
+            private int count;
 
-        public class Vegetable : Food
-        { }
-
-        public class Apple : Fruit
-        { }
-        public class Pear : Fruit
-        { }
-        public class Banana : Fruit
-        { }
-        public class Potato : Vegetable
-        { }
-        public class Carrot : Vegetable
-        { }
+            public Obj(string name, string ownerName, int objLength, int count)
+            {
+             this.name = name;
+             owner = ownerName;
+             length = objLength;
+             this.count = count;
+            }
+        }
     }
 }
