@@ -16,43 +16,26 @@ namespace TasksForModul7
 
 
         }
-        public class A
+        class Obj
         {
-            public virtual void Display()
+            public int Value;
+            public static Obj operator +(Obj a, Obj b)
             {
-                Console.WriteLine("A");
+                return new Obj
+                {
+                    Value = a.Value + b.Value
+                };
             }
-        }
-        public class B : A 
-        {
-            public new void Display()
+            public static Obj operator -(Obj a, Obj b)
             {
-                Console.WriteLine("B");
+                return new Obj
+                {
+                    Value = a.Value - b.Value
+                };
             }
         }
 
-        public class C:A
-        {
-            public override void Display()
-            {
-                Console.WriteLine("C");
-            }
 
-        }
-        public class D : B
-        {
-            public new void Display()
-            {
-                Console.WriteLine("D");
-            }
-        }
-        public class E : C
-        {
-            public new void Display()
-            {
-                Console.WriteLine("E");
-            }
-        }
 
     }
 }
