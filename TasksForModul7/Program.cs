@@ -16,22 +16,25 @@ namespace TasksForModul7
 
 
         }
-        class Obj
+        class IndexingClass
         {
-            public int Value;
-            public static Obj operator +(Obj a, Obj b)
+            private int[] array;
+
+            public IndexingClass(int[] array)
             {
-                return new Obj
-                {
-                    Value = a.Value + b.Value
-                };
+                this.array = array;
             }
-            public static Obj operator -(Obj a, Obj b)
+
+            public int this[int index]
             {
-                return new Obj
+                get
                 {
-                    Value = a.Value - b.Value
-                };
+                    return array[index];
+                }
+                set
+                {
+                    array[index] = value;
+                }
             }
         }
 
