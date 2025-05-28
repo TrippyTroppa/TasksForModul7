@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TasksForModul7
 {
-    
+
     class Program
     {
         static void Main(string[] args)
@@ -16,29 +16,33 @@ namespace TasksForModul7
 
 
         }
-        class IndexingClass
+        abstract class ComputerPart
         {
-            private int[] array;
+            public abstract void Work();
+        }
 
-            public IndexingClass(int[] array)
+        class Processor : ComputerPart
+        {
+            public override void Work()
             {
-                this.array = array;
-            }
 
-            public int this[int index]
-            {
-                get
-                {
-                    return array[index];
-                }
-                set
-                {
-                    array[index] = value;
-                }
             }
         }
 
+        class MotherBoard : ComputerPart
+        {
+            public override void Work()
+            {
 
+            }
+        }
 
+        class GraphicCard : ComputerPart
+        {
+            public override void Work()
+            {
+
+            }
+        }
     }
 }
