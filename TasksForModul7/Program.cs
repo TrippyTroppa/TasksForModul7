@@ -16,33 +16,12 @@ namespace TasksForModul7
 
 
         }
-        abstract class ComputerPart
+        class Obj 
         {
-            public abstract void Work();
+            public string Name;
+            public string Description;
+            public static int MaxValue = 2000;
         }
-
-        class Processor : ComputerPart
-        {
-            public override void Work()
-            {
-
-            }
-        }
-
-        class MotherBoard : ComputerPart
-        {
-            public override void Work()
-            {
-
-            }
-        }
-
-        class GraphicCard : ComputerPart
-        {
-            public override void Work()
-            {
-
-            }
-        }
+        
     }
 }
