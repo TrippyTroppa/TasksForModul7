@@ -18,13 +18,12 @@ namespace TasksForModul7
     }
 
 
-    class ElectricEngine { }
-
-    class GasEngine { }
-
-    class Car<T>
+    class Record <T1,T2>
     {
-        public T Engine;
+        public T1 ID;
+        public T2 Value;
+        public DateTime Date;
+
     }
 
     
