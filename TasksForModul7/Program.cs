@@ -18,12 +18,24 @@ namespace TasksForModul7
     }
 
 
-    class Record <T1,T2>
-    {
-        public T1 ID;
-        public T2 Value;
-        public DateTime Date;
+    class ElectricEngine { }
 
+    class GasEngine { }
+
+    class BAttery { }
+
+    class Differential { }
+
+    class Wheel { }
+
+    class Car<T>
+    {
+        public T Engine;
+
+        public virtual void ChangePart<T2>(T2 newPart)
+        {
+
+        }
     }
 
     
