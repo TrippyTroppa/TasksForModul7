@@ -17,8 +17,8 @@ namespace TasksForModul7
         }
     }
     
-    class Engine { }
-    class CarPart { }
+    abstract class Engine { }
+    abstract class CarPart { }
     class ElectricEngine : Engine { }
 
     class GasEngine : Engine { }
@@ -29,7 +29,7 @@ namespace TasksForModul7
 
     class Wheel : CarPart { }
 
-    class Car<TEngine> where TEngine : Engine
+    abstract class Car<TEngine> where TEngine : Engine
     {
         public TEngine Engine;
 
@@ -39,5 +39,19 @@ namespace TasksForModul7
         }
     }
 
-    
+    class ElectricCar : Car<ElectricEngine> 
+    {
+        public override void ChangePart<TCarPart>(TCarPart newPart)
+        {
+            
+        }
+    }
+
+    class GasCar : Car<GasEngine>
+    {
+        public override void ChangePart<TCarPart>(TCarPart newPart)
+        {
+            
+        }
+    }
 }
