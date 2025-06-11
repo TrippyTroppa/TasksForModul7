@@ -16,23 +16,24 @@ namespace TasksForModul7
 
         }
     }
+    
+    class Engine { }
+    class CarPart { }
+    class ElectricEngine : Engine { }
 
+    class GasEngine : Engine { }
 
-    class ElectricEngine { }
+    class BAttery : CarPart { }
 
-    class GasEngine { }
+    class Differential : CarPart { }
 
-    class BAttery { }
+    class Wheel : CarPart { }
 
-    class Differential { }
-
-    class Wheel { }
-
-    class Car<T>
+    class Car<TEngine> where TEngine : Engine
     {
-        public T Engine;
+        public TEngine Engine;
 
-        public virtual void ChangePart<T2>(T2 newPart)
+        public virtual void ChangePart<TCarPart>(TCarPart newPart) where TCarPart: CarPart
         {
 
         }
